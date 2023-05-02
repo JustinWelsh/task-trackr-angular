@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 
+// Below is the structure of Angulars components!!
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-root', //HTML tag to represent the component.
+  templateUrl: './app.component.html', //HTML file
+  styleUrls: ['./app.component.css'] //Style (can have multiple)
 })
 export class AppComponent {
-  title = 'frontend';
+  // You will put properties and methods here
+  // these can then be used inside of our template
+  title: string = 'Task Trackr';   
 }
