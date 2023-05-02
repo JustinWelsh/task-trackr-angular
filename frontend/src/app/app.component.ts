@@ -9,5 +9,4 @@ import { Component } from '@angular/core';
 export class AppComponent {
   // You will put properties and methods here
   // these can then be used inside of our template
-  title: string = 'Task Trackr';   
 }

@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit{
+  title: string = 'Task Trackr';   
 
   constructor() { }
 
@@ -14,6 +15,6 @@ export class HeaderComponent implements OnInit{
       // Use this when you want to initialize code.
       // http request etc..
 
-      
+
   }
 }
