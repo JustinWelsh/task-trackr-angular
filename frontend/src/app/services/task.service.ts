@@ -7,9 +7,11 @@ import { Task } from '../Task';
   providedIn: 'root'
 })
 export class TaskService {
+  private apiUrl: string = 'http://localhost:5000/tasks'
 
   constructor(private http: HttpClient) { }
 
-  getTasks() {
+  getTasks(): Observable<Task[]> {
+    return this.http.get<Task[]>(this.apiUrl)
   }
 }
