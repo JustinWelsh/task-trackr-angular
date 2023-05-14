@@ -1,4 +1,7 @@
-<div class="task">
+<div
+class="task"
+[ngClass]="{'reminder': propTask?.reminder}"
+(dblclick)="toggleReminder(propTask)">
   <h3>{{propTask?.text}}
     <fa-icon
     [icon]="faTimes"
