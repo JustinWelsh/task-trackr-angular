@@ -14,7 +14,7 @@ export class TasksComponent implements OnInit {
   constructor(private taskService: TaskService) { }
 
   ngOnInit(): void {
-    this.taskService.getTasks().subscribe(tasks => this.tasks = tasks)
+    this.taskService.getTasks().subscribe(tasks => this.tasks = tasks.reverse())
   }
 
   handleDeleteTask(task: Task) {
@@ -26,5 +26,12 @@ export class TasksComponent implements OnInit {
   handleReminderToggle(task: Task) {
     task.reminder = !task.reminder
     this.taskService.updateTaskReminder(task).subscribe()
+  }
+
+  handleAddTask(event: any) {
+    console.log(event);
+    this.taskService.addNewTask(event).subscribe(
+      () => this.tasks.unshift(event)
+    )
   }
 }
