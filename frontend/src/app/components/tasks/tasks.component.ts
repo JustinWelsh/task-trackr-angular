@@ -14,6 +14,11 @@ export class TasksComponent implements OnInit {
   constructor(private taskService: TaskService) { }
 
   ngOnInit(): void {
+
+    this.renderTasks();
+  }
+
+  renderTasks() {
     this.taskService.getTasks().subscribe(tasks => this.tasks = tasks.reverse())
   }
 
@@ -33,5 +38,6 @@ export class TasksComponent implements OnInit {
     this.taskService.addNewTask(event).subscribe(
       () => this.tasks.unshift(event)
     )
+    this.renderTasks();
   }
 }

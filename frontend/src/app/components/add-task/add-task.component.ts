@@ -16,7 +16,7 @@ export class AddTaskComponent {
     if (this.text) {
       const newTask: Task | any = {
         text: this.text,
-        day: this.day,
+        day: this.day ? this.day : null,
         reminder: this.reminder
       };
 
