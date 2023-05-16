@@ -34,7 +34,6 @@ export class TasksComponent implements OnInit {
   }
 
   handleAddTask(event: any) {
-    console.log(event);
     this.taskService.addNewTask(event).subscribe(
       () => this.tasks.unshift(event)
     )
