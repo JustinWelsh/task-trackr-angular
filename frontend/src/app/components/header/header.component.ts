@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UiService } from 'src/app/services/ui.service';
 
 @Component({
   selector: 'app-header',
@@ -6,15 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit{
-  title: string = 'Task Trackr';   
+  title: string = 'Task Trackr';
 
-  constructor() { }
+  constructor(private uiService: UiService) { }
 
   // Life-cycle method
   ngOnInit(): void {
-      // Use this when you want to initialize code.
-      // http request etc..
 
-
+  }
+  toggleTaskForm() {
+    this.uiService.toggleAddTask();
   }
 }

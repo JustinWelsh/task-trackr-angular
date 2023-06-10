@@ -12,7 +12,8 @@ export class UiService {
 
   toggleAddTask(): void {
     this.showAddTask = !this.showAddTask;
-    this.subject.next(this.showAddTask);
+    this.subject.next(this.showAddTask); // throws the value to observers/subscribers
+
   }
 
   onToggle(): Observable<any> {

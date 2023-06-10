@@ -1,4 +1,4 @@
-<app-add-task (addTaskEvent)="handleAddTask($event)"></app-add-task>
+<app-add-task *ngIf="showAddTask" (addTaskEvent)="handleAddTask($event)"></app-add-task>
 <app-task-item
 *ngFor="let task of tasks" [propTask]="task"
 (deleteEvent)="handleDeleteTask(task)"
